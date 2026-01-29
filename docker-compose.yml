@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  # The Node.js Web Application
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      # Connects to the 'db' service defined below
+      - MONGO_URI=mongodb://db:271017/devblog
+      - PORT=3000
+    depends_on:
+      - db
+    restart: always
+
+  # MongoDB Database
+  db:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    restart: always
+
+volumes:
+  mongodb_data:
