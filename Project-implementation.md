@@ -1,5 +1,7 @@
 DevBlog, is a standard monolithic Node.js web application designed with an Express.js framework and a MongoDB backend.
 
+![alt text](image-2.png)
+
 1. Application Architecture & Stack
 
 Runtime: Node.js v19.9.0
@@ -28,3 +30,8 @@ Access the Blog: Open http://localhost:3001 in your browser.
 Manage the Database: Open http://localhost:8081
 
 I created /admin account by running "docker-compose exec app node create-user-cli.js"
+
+![alt text](image.png)
+
+![alt text](image-1.png)
+
